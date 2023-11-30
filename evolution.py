@@ -95,7 +95,7 @@ class EvolutionSearcher(object):
             return False
 
         if info['params'] < self.min_parameters_limits:
-            print('under minimum parameters limit')
+            print('under minimum parameters limit: wants {}, got {}'.format(self.min_parameters_limits, info['params']))
             return False
 
         print("rank:", utils.get_rank(), cand, info['params'])
